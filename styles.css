@@ -686,18 +686,17 @@ p {
 }
 
 .faq-answer {
-  display: grid;
-  grid-template-rows: 0fr;
-  transition: grid-template-rows 180ms ease;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 280ms ease;
 }
 
 .faq-answer p {
-  overflow: hidden;
   padding: 0 0 20px;
 }
 
 .faq-item.is-open .faq-answer {
-  grid-template-rows: 1fr;
+  max-height: 400px;
 }
 
 .cta-section {
