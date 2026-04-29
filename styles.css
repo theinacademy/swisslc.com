@@ -1292,7 +1292,7 @@ p {
 }
 
 .testimonial-world-map {
-  height: 280px;
+  height: 440px;
   border-radius: var(--radius-lg);
   overflow: hidden;
   position: relative;
@@ -1304,7 +1304,7 @@ p {
   height: 100%;
   object-fit: cover;
   object-position: center;
-  opacity: 0.55;
+  opacity: 0.6;
 }
 
 .testimonial-world-map::after {
@@ -1356,7 +1356,7 @@ p {
   }
 
   .testimonial-world-map {
-    height: 200px;
+    height: 300px;
   }
 
   .about-person__grid,
