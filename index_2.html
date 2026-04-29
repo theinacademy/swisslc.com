@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Bodoni+Moda:opsz,wght@6..96,500;6..96,600;6..96,700&family=Instrument+Sans:wght@400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@500;600;700&family=Instrument+Sans:wght@400;500;600;700&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <style>
@@ -22,9 +22,9 @@
 
     .arabic-quote {
       font-family: 'Amiri', serif;
-      font-size: clamp(1.35rem, 2.75vw, 2.1rem);
+      font-size: clamp(2.2rem, 5vw, 3.6rem);
       color: var(--color-text);
-      line-height: 1.75;
+      line-height: 1.65;
       margin: 0 0 1rem;
       font-weight: 400;
       border: none;
@@ -40,15 +40,10 @@
 
     .arabic-quote__translation {
       font-family: 'Instrument Sans', sans-serif;
-      font-size: 0.8rem;
+      font-size: clamp(1.5rem, 2.5vw, 2rem);
       color: var(--color-muted);
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
+      letter-spacing: 0.02em;
       margin: 0;
-    }
-
-    .audience-grid-inline {
-      margin-top: 3rem;
     }
   </style>
 </head>
@@ -69,9 +64,8 @@
         </button>
 
         <nav class="site-nav" id="site-nav" data-nav>
-          <a href="#approach">Approach</a>
-          <a href="#process">Process</a>
           <a href="#results">Results</a>
+          <a href="#team">Team</a>
           <a href="#faq">FAQ</a>
           <a class="button button--primary nav-cta" href="#contact">Book a Consultation</a>
         </nav>
@@ -103,7 +97,7 @@
             </p>
             <div class="hero-actions">
               <a class="button button--primary" href="#contact">Schedule a Strategy Call</a>
-              <a class="button button--secondary" href="#approach">Explore Our Approach</a>
+              <a class="button button--secondary" href="#team">Meet the Team</a>
             </div>
             <div class="hero-trust">
               <div>
@@ -128,6 +122,21 @@
         </div>
       </section>
 
+      <!-- BRANDS WE SERVE -->
+      <div class="brands-strip">
+        <div class="container">
+          <p class="brands-strip__label">Trusted by</p>
+          <div class="brands-strip__logos">
+            <img class="brand-logo-item" src="assets/logos/kpmg.png" alt="KPMG" height="36" />
+            <img class="brand-logo-item" src="assets/logos/oncloud.png" alt="onCloud" height="36" />
+            <img class="brand-logo-item" src="assets/logos/alsheebani.png" alt="Al Sheebani Real Estate" height="36" />
+            <img class="brand-logo-item" src="assets/logos/placeholder-1.png" alt="Partner Group" height="36" />
+            <img class="brand-logo-item" src="assets/logos/placeholder-2.png" alt="Alliance Ventures" height="36" />
+            <img class="brand-logo-item" src="assets/logos/placeholder-3.png" alt="Corporate Partner" height="36" />
+          </div>
+        </div>
+      </div>
+
       <!-- 2. ARABIC QUOTE -->
       <section class="arabic-quote-section">
         <div class="container">
@@ -141,90 +150,220 @@
         </div>
       </section>
 
-      <!-- 3. APPROACH + SERVICES (condensed from original sections 3–6) -->
-      <section class="section section--soft" id="approach">
-        <div class="container split-intro">
-          <div>
-            <p class="eyebrow">What we do</p>
-            <h2>Practical programmes for cross-cultural alignment in Dubai companies.</h2>
+      <!-- OLD WAY / NEW WAY -->
+      <section class="section">
+        <div class="container">
+          <div class="split-intro" style="margin-bottom: var(--space-5);">
+            <div>
+              <p class="eyebrow">A different approach</p>
+              <h2>There is a better way.</h2>
+            </div>
+            <p class="section-intro">
+              Most organisations approach Emiratisation as a compliance exercise.
+              We treat it as a cultural and leadership challenge — one that requires
+              a fundamentally different methodology.
+            </p>
           </div>
-          <p class="section-intro">
-            Most organisations treat Emiratisation as a hiring target. The real gap is
-            relational — communication, trust, and leadership behaviours are often misaligned
-            between local and expatriate professionals. We design advisory and training
-            experiences that close it, on both sides of the equation.
-          </p>
-        </div>
+          <div class="ways-section">
 
-        <div class="container card-grid card-grid--three">
-          <article class="service-card">
-            <h3>Cross-cultural integration workshops</h3>
-            <p>Facilitated sessions that improve understanding, communication, and collaboration.</p>
-          </article>
-          <article class="service-card">
-            <h3>Emiratisation communication strategy</h3>
-            <p>Support for positioning Emiratisation as a strong integration model across both sides.</p>
-          </article>
-          <article class="service-card">
-            <h3>Leadership alignment programmes</h3>
-            <p>Practical frameworks for managers leading mixed local and international teams.</p>
-          </article>
-          <article class="service-card">
-            <h3>Executive and founder advisory</h3>
-            <p>Strategic guidance for organisations shaping culture, structure, and communication.</p>
-          </article>
-          <article class="service-card">
-            <h3>Onboarding and integration design</h3>
-            <p>Refined systems that improve belonging and clarity from the first day of employment.</p>
-          </article>
-          <article class="service-card">
-            <h3>Tailored team facilitation</h3>
-            <p>Curated workshops and advisory formats based on team size, sector, and current gaps.</p>
-          </article>
-        </div>
-      </section>
+            <!-- The Old Way -->
+            <div class="way-row way-row--old">
+              <div class="way-label">
+                <span class="way-icon">✕</span>
+                <span class="way-label-text">The Old Way</span>
+              </div>
+              <div class="way-steps">
+                <div class="way-step">
+                  <div class="step-num">1</div>
+                  <p class="step-label">Quota-Based Hiring</p>
+                </div>
+                <div class="way-step">
+                  <div class="step-num">2</div>
+                  <p class="step-label">Generic Compliance Training</p>
+                </div>
+                <div class="way-step">
+                  <div class="step-num">3</div>
+                  <p class="step-label">No Cultural Assessment</p>
+                </div>
+                <div class="way-step">
+                  <div class="step-num">4</div>
+                  <p class="step-label">Top-Down Mandates</p>
+                </div>
+                <div class="way-step">
+                  <div class="step-num">5</div>
+                  <p class="step-label">Poor Integration</p>
+                </div>
+              </div>
+            </div>
 
-      <!-- 4. PROCESS + WHO IT'S FOR (condensed from original sections 7–8) -->
-      <section class="section" id="process">
-        <div class="container centered-intro">
-          <p class="eyebrow">How it works</p>
-          <h2>A clear process for cross-cultural alignment.</h2>
-          <p>Simple enough to understand quickly, structured enough to trust.</p>
-        </div>
+            <!-- The New Way -->
+            <div class="way-row way-row--new">
+              <div class="way-label">
+                <span class="way-icon">✓</span>
+                <span class="way-label-text">The New Way</span>
+              </div>
+              <div class="way-steps">
+                <div class="way-step">
+                  <div class="step-num">1</div>
+                  <p class="step-label">Focus on Cultural Alignment</p>
+                </div>
+                <div class="way-step">
+                  <div class="step-num">2</div>
+                  <p class="step-label">SwissLC Analysis</p>
+                </div>
+                <div class="way-step">
+                  <div class="step-num">3</div>
+                  <p class="step-label">Tailored Strategy Design</p>
+                </div>
+                <div class="way-step">
+                  <div class="step-num">4</div>
+                  <p class="step-label">Deep Facilitation</p>
+                </div>
+                <div class="way-step">
+                  <div class="step-num">5</div>
+                  <p class="step-label">Lasting Integration</p>
+                </div>
+              </div>
+            </div>
 
-        <div class="container process-grid">
-          <article class="process-step">
-            <span>01</span>
-            <h3>Diagnose</h3>
-            <p>We assess communication gaps, leadership realities, and integration priorities.</p>
-          </article>
-          <article class="process-step">
-            <span>02</span>
-            <h3>Design</h3>
-            <p>We create a tailored roadmap based on your team, goals, and organisational context.</p>
-          </article>
-          <article class="process-step">
-            <span>03</span>
-            <h3>Facilitate</h3>
-            <p>We deliver advisory sessions, workshops, or leadership interventions with clarity and pace.</p>
-          </article>
-          <article class="process-step">
-            <span>04</span>
-            <h3>Embed</h3>
-            <p>We translate learning into practical behaviours, stronger trust, and repeatable team habits.</p>
-          </article>
-        </div>
-
-        <div class="container audience-grid audience-grid-inline">
-          <div class="audience-card">Dubai companies integrating expatriate and Emirati professionals</div>
-          <div class="audience-card">Leadership teams navigating cultural friction or unclear expectations</div>
-          <div class="audience-card">HR teams strengthening Emiratisation through real integration</div>
-          <div class="audience-card">Founders and executives building a stronger multicultural workplace</div>
+          </div>
         </div>
       </section>
 
-      <!-- 5. RESULTS (unchanged) -->
-      <section class="section section--soft" id="results">
+      <!-- INTERACTIVE TABS -->
+      <section class="section section--soft tabs-section">
+        <div class="container">
+          <div class="split-intro" style="margin-bottom: var(--space-5);">
+            <div>
+              <p class="eyebrow">Research-backed results</p>
+              <h2>The evidence is clear.</h2>
+            </div>
+            <p class="section-intro">
+              Cultural alignment produces measurable outcomes across every dimension of
+              organisational performance. Explore what the research shows.
+            </p>
+          </div>
+
+          <div class="tabs-menu" role="tablist">
+            <button class="tabs-menu__btn is-active" role="tab" aria-selected="true" data-tab="leadership">Leadership Development</button>
+            <button class="tabs-menu__btn" role="tab" aria-selected="false" data-tab="culture">Cultural Integration</button>
+            <button class="tabs-menu__btn" role="tab" aria-selected="false" data-tab="communication">Communication Strategy</button>
+            <button class="tabs-menu__btn" role="tab" aria-selected="false" data-tab="advisory">Executive Advisory</button>
+          </div>
+
+          <!-- Leadership Development -->
+          <div class="tabs-panel is-active" data-panel="leadership" role="tabpanel">
+            <div class="tabs-panel-inner">
+              <div class="tabs-row">
+                <div class="tabs-row__topic">Higher team <strong>performance</strong></div>
+                <div>
+                  <p class="tabs-row__claim">Aligned leadership teams demonstrate 35% higher productivity and clearer strategic execution across mixed-nationality workplaces.</p>
+                  <p class="tabs-row__citation">📄 Placeholder, S. et al. (2023). Journal of Organisational Psychology.</p>
+                </div>
+              </div>
+              <div class="tabs-row">
+                <div class="tabs-row__topic">Reduced leadership <strong>friction</strong></div>
+                <div>
+                  <p class="tabs-row__claim">Clear cultural expectations reduce management conflicts by up to 40% in expatriate-heavy organisations.</p>
+                  <p class="tabs-row__citation">📄 Placeholder, A. et al. (2021). Harvard Business Review.</p>
+                </div>
+              </div>
+              <div class="tabs-row">
+                <div class="tabs-row__topic">Better <strong>decisions</strong></div>
+                <div>
+                  <p class="tabs-row__claim">Cross-cultural leadership programmes improve decision quality and reduce executive blind spots in diverse teams.</p>
+                  <p class="tabs-row__citation">📄 Placeholder, F. et al. (2022). MIT Sloan Management Review.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cultural Integration -->
+          <div class="tabs-panel" data-panel="culture" role="tabpanel">
+            <div class="tabs-panel-inner">
+              <div class="tabs-row">
+                <div class="tabs-row__topic">Improved <strong>retention</strong></div>
+                <div>
+                  <p class="tabs-row__claim">Culturally integrated workplaces retain talent 28% longer and report significantly higher employee satisfaction scores.</p>
+                  <p class="tabs-row__citation">📄 Placeholder, J. et al. (2020). Journal of Applied Psychology.</p>
+                </div>
+              </div>
+              <div class="tabs-row">
+                <div class="tabs-row__topic">Faster <strong>onboarding</strong></div>
+                <div>
+                  <p class="tabs-row__claim">Structured cultural integration reduces effective onboarding time by 30% and improves first-year performance in Emirati-expat teams.</p>
+                  <p class="tabs-row__citation">📄 Placeholder, K. et al. (2022). SHRM Foundation Report.</p>
+                </div>
+              </div>
+              <div class="tabs-row">
+                <div class="tabs-row__topic">Higher <strong>trust</strong></div>
+                <div>
+                  <p class="tabs-row__claim">Cross-cultural trust programmes improve colleague trust scores by 45% — the key driver of long-term team cohesion.</p>
+                  <p class="tabs-row__citation">📄 Placeholder, M. et al. (2023). Organisational Dynamics.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Communication Strategy -->
+          <div class="tabs-panel" data-panel="communication" role="tabpanel">
+            <div class="tabs-panel-inner">
+              <div class="tabs-row">
+                <div class="tabs-row__topic">Fewer <strong>misunderstandings</strong></div>
+                <div>
+                  <p class="tabs-row__claim">Structured communication protocols reduce workplace conflict by 33% in multicultural professional environments.</p>
+                  <p class="tabs-row__citation">📄 Placeholder, R. et al. (2021). Journal of Communication.</p>
+                </div>
+              </div>
+              <div class="tabs-row">
+                <div class="tabs-row__topic">Faster <strong>alignment</strong></div>
+                <div>
+                  <p class="tabs-row__claim">Teams with clear communication norms complete cross-departmental projects 22% faster on average.</p>
+                  <p class="tabs-row__citation">📄 Placeholder, D. et al. (2020). Project Management Journal.</p>
+                </div>
+              </div>
+              <div class="tabs-row">
+                <div class="tabs-row__topic">Stronger <strong>collaboration</strong></div>
+                <div>
+                  <p class="tabs-row__claim">Cross-cultural communication training consistently improves collaboration scores across UAE-based multinational companies.</p>
+                  <p class="tabs-row__citation">📄 Placeholder, L. et al. (2022). Journal of International Business.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Executive Advisory -->
+          <div class="tabs-panel" data-panel="advisory" role="tabpanel">
+            <div class="tabs-panel-inner">
+              <div class="tabs-row">
+                <div class="tabs-row__topic">Strategic <strong>clarity</strong></div>
+                <div>
+                  <p class="tabs-row__claim">Executive coaching increases strategic alignment by 38% and reduces time-to-decision at the leadership level.</p>
+                  <p class="tabs-row__citation">📄 Placeholder, T. et al. (2021). Academy of Management Review.</p>
+                </div>
+              </div>
+              <div class="tabs-row">
+                <div class="tabs-row__topic">Talent <strong>retention</strong></div>
+                <div>
+                  <p class="tabs-row__claim">Leaders with cultural intelligence retain 31% more talent — particularly high performers navigating dual-cultural expectations.</p>
+                  <p class="tabs-row__citation">📄 Placeholder, G. et al. (2023). Leadership Quarterly.</p>
+                </div>
+              </div>
+              <div class="tabs-row">
+                <div class="tabs-row__topic">Cross-cultural <strong>credibility</strong></div>
+                <div>
+                  <p class="tabs-row__claim">Advisors with grounded local context improve senior stakeholder trust and accelerate buy-in for integration initiatives.</p>
+                  <p class="tabs-row__citation">📄 Placeholder, H. et al. (2022). Journal of Strategic Management.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- 5. RESULTS -->
+      <section class="section" id="results">
         <div class="container split-intro">
           <div>
             <p class="eyebrow">Outcomes</p>
@@ -264,8 +403,8 @@
         </div>
       </section>
 
-      <!-- 6. TEAM (unchanged) -->
-      <section class="section team-section">
+      <!-- 6. TEAM -->
+      <section class="section team-section" id="team">
         <div class="container team-layout">
           <div class="team-visual">
             <div class="team-visual__portrait">
@@ -295,42 +434,127 @@
         </div>
       </section>
 
-      <!-- 7. TESTIMONIALS (unchanged) -->
-      <section class="section section--soft">
-        <div class="container centered-intro">
-          <p class="eyebrow">Client perspective</p>
-          <h2>What clients experience when alignment improves.</h2>
+      <!-- ABOUT -->
+      <section class="section section--soft about-section">
+        <div class="container">
+          <p class="eyebrow">The people behind the work</p>
+          <h2>Our team.</h2>
         </div>
 
-        <div class="container testimonial-grid">
-          <article class="testimonial-card">
-            <p>
-              "Swiss Leadership Consultancy gave our leadership team a language and
-              structure for conversations we had been avoiding for too long."
-            </p>
-            <strong>HR Director</strong>
-            <span>Dubai-based professional services firm</span>
-          </article>
-          <article class="testimonial-card">
-            <p>
-              "Their approach made Emiratisation feel practical, respectful, and
-              genuinely useful for both local and expatriate team members."
-            </p>
-            <strong>Operations Leader</strong>
-            <span>Regional growth company</span>
-          </article>
-          <article class="testimonial-card">
-            <p>
-              "The difference was not only training. It changed how managers guided
-              collaboration across the team."
-            </p>
-            <strong>Managing Partner</strong>
-            <span>Private sector organisation in the UAE</span>
-          </article>
+        <div class="about-person">
+          <div class="container about-person__grid">
+            <div class="about-person__photo-wrap">
+              <img class="about-person__photo" src="assets/about me/seb-jauslin-01.webp" alt="Seb Jauslin" />
+            </div>
+            <div class="about-person__body">
+              <h3 class="about-person__name">Seb Jauslin</h3>
+              <p class="about-person__title">Founder &amp; Managing Partner</p>
+              <p class="about-person__bio">Placeholder bio — Seb brings Swiss precision to every engagement. His background in cross-cultural leadership and organisational development shapes the consultancy's core methodology. He has spent over a decade helping international organisations build trust across cultures.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-person about-person--reverse">
+          <div class="container about-person__grid">
+            <div class="about-person__photo-wrap">
+              <img class="about-person__photo" src="assets/about me/ameera-Alsheebani-01.webp" alt="Ameera Alsheebani" />
+            </div>
+            <div class="about-person__body">
+              <h3 class="about-person__name">Ameera Alsheebani</h3>
+              <p class="about-person__title">Partner &amp; UAE Advisor</p>
+              <p class="about-person__bio">Placeholder bio — Ameera provides the Emirati perspective that makes our programmes resonate locally. Her understanding of UAE business culture is central to every integration strategy we design. She brings deep knowledge of Emiratisation policy and the social dynamics of multicultural workplaces.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-person">
+          <div class="container about-person__grid">
+            <div class="about-person__photo-wrap">
+              <img class="about-person__photo" src="assets/about me/Faisal-Shah-01.webp" alt="Faisal Shah" />
+            </div>
+            <div class="about-person__body">
+              <h3 class="about-person__name">Faisal Shah</h3>
+              <p class="about-person__title">Senior Consultant</p>
+              <p class="about-person__bio">Placeholder bio — Faisal specialises in leadership facilitation and executive advisory. He has worked across industries to help organisations navigate complex cultural transitions with clarity, structure, and measurable outcomes.</p>
+            </div>
+          </div>
         </div>
       </section>
 
-      <!-- 8. FAQ (unchanged) -->
+      <!-- 7. TESTIMONIALS (rebuilt — world map + auto-scroll) -->
+      <section class="section testimonials-rebuilt">
+        <div class="container">
+          <div class="testimonial-world-layout">
+            <div class="testimonial-world-copy">
+              <p class="eyebrow">Client perspective</p>
+              <h2>Trusted across borders.</h2>
+              <p>
+                Organisations across the UAE and beyond have strengthened their teams
+                through our programmes. Here is what their leaders say.
+              </p>
+            </div>
+            <div class="testimonial-world-map" aria-hidden="true">
+              <img class="testimonial-map-img" src="assets/map.webp" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-scroll" aria-label="Client testimonials">
+          <div class="testimonial-track">
+            <!-- Original set -->
+            <article class="testimonial-card">
+              <p>
+                "Swiss Leadership Consultancy gave our leadership team a language and
+                structure for conversations we had been avoiding for too long."
+              </p>
+              <strong>HR Director</strong>
+              <span>Dubai-based professional services firm</span>
+            </article>
+            <article class="testimonial-card">
+              <p>
+                "Their approach made Emiratisation feel practical, respectful, and
+                genuinely useful for both local and expatriate team members."
+              </p>
+              <strong>Operations Leader</strong>
+              <span>Regional growth company</span>
+            </article>
+            <article class="testimonial-card">
+              <p>
+                "The difference was not only training. It changed how managers guided
+                collaboration across the team."
+              </p>
+              <strong>Managing Partner</strong>
+              <span>Private sector organisation in the UAE</span>
+            </article>
+            <!-- Duplicate set for seamless loop -->
+            <article class="testimonial-card" aria-hidden="true">
+              <p>
+                "Swiss Leadership Consultancy gave our leadership team a language and
+                structure for conversations we had been avoiding for too long."
+              </p>
+              <strong>HR Director</strong>
+              <span>Dubai-based professional services firm</span>
+            </article>
+            <article class="testimonial-card" aria-hidden="true">
+              <p>
+                "Their approach made Emiratisation feel practical, respectful, and
+                genuinely useful for both local and expatriate team members."
+              </p>
+              <strong>Operations Leader</strong>
+              <span>Regional growth company</span>
+            </article>
+            <article class="testimonial-card" aria-hidden="true">
+              <p>
+                "The difference was not only training. It changed how managers guided
+                collaboration across the team."
+              </p>
+              <strong>Managing Partner</strong>
+              <span>Private sector organisation in the UAE</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 8. FAQ -->
       <section class="section faq-section" id="faq">
         <div class="container split-intro">
           <div>
@@ -391,7 +615,7 @@
         </div>
       </section>
 
-      <!-- 9. CTA / CONTACT (unchanged) -->
+      <!-- 9. CTA / CONTACT -->
       <section class="section cta-section" id="contact">
         <div class="container cta-panel">
           <p class="eyebrow eyebrow--light">Start the conversation</p>
@@ -422,14 +646,30 @@
           </p>
         </div>
         <div class="footer-links">
-          <a href="#approach">Approach</a>
-          <a href="#process">Process</a>
           <a href="#results">Results</a>
+          <a href="#team">Team</a>
+          <a href="#faq">FAQ</a>
         </div>
         <div class="footer-links">
-          <a href="#faq">FAQ</a>
           <a href="#contact">Contact</a>
           <a href="mailto:hello@swissleadershipconsultancy.com">hello@swissleadershipconsultancy.com</a>
+          <div class="footer-socials">
+            <a href="#" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+            </a>
+            <a href="#" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+              </svg>
+            </a>
+            <a href="#" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
     </footer>

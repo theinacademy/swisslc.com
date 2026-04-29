@@ -3,7 +3,7 @@ const nav = document.querySelector("[data-nav]");
 const navToggle = document.querySelector("[data-nav-toggle]");
 const faqButtons = document.querySelectorAll(".faq-question");
 const revealTargets = document.querySelectorAll(
-  ".info-card, .service-card, .pillar-card, .process-step, .result-card, .testimonial-card, .audience-card, .team-section, .cta-panel"
+  ".info-card, .service-card, .pillar-card, .process-step, .result-card, .testimonial-card, .audience-card, .team-section, .cta-panel, .about-card, .way-row, .tabs-panel-inner"
 );
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
@@ -36,6 +36,30 @@ faqButtons.forEach((button) => {
 
     const isOpen = item.classList.toggle("is-open");
     button.setAttribute("aria-expanded", String(isOpen));
+  });
+});
+
+// Tab switching
+const tabButtons = document.querySelectorAll(".tabs-menu__btn");
+const tabPanels = document.querySelectorAll(".tabs-panel");
+
+tabButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const target = button.getAttribute("data-tab");
+
+    tabButtons.forEach((btn) => {
+      btn.classList.remove("is-active");
+      btn.setAttribute("aria-selected", "false");
+    });
+    tabPanels.forEach((panel) => {
+      panel.classList.remove("is-active");
+    });
+
+    button.classList.add("is-active");
+    button.setAttribute("aria-selected", "true");
+
+    const targetPanel = document.querySelector(`[data-panel="${target}"]`);
+    if (targetPanel) targetPanel.classList.add("is-active");
   });
 });
 

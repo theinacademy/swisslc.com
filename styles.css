@@ -104,15 +104,15 @@ h3 {
 
 h1,
 h2 {
-  font-family: "Bodoni Moda", serif;
+  font-family: "Playfair Display", serif;
   font-weight: 600;
-  letter-spacing: -0.03em;
-  line-height: 0.97;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
 }
 
 h1 {
   font-size: clamp(3.65rem, 8vw, 6.4rem);
-  max-width: 10ch;
+  max-width: 11ch;
 }
 
 h2 {
@@ -924,5 +924,480 @@ p {
 
   .footer-grid {
     gap: 24px;
+  }
+}
+
+/* ─── BRANDS STRIP ─── */
+
+.brands-strip {
+  padding: 22px 0;
+  border-block: 1px solid var(--color-border);
+  background: rgba(246, 246, 246, 0.7);
+}
+
+.brands-strip__label {
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin: 0 0 14px;
+}
+
+.brands-strip__logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.brand-logo-item {
+  height: 36px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  opacity: 0.5;
+  filter: grayscale(1);
+  transition: opacity 200ms ease;
+}
+
+.brand-logo-item:hover {
+  opacity: 0.85;
+}
+
+/* ─── OLD WAY / NEW WAY ─── */
+
+.ways-section {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.way-row {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  align-items: center;
+  gap: var(--space-5);
+  padding: 28px 32px;
+  border-radius: var(--radius-lg);
+}
+
+.way-row--old {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+}
+
+.way-row--new {
+  background: linear-gradient(135deg, rgba(195, 54, 43, 0.96), rgba(126, 19, 13, 0.98));
+  color: #fff;
+}
+
+.way-label {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.way-icon {
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.way-row--old .way-icon {
+  background: rgba(21, 20, 20, 0.09);
+  color: var(--color-muted);
+}
+
+.way-row--new .way-icon {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.way-label-text {
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.way-steps {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  position: relative;
+}
+
+.way-steps::before {
+  content: '';
+  position: absolute;
+  top: 19px;
+  left: calc(100% / 10);
+  right: calc(100% / 10);
+  height: 1px;
+  z-index: 0;
+}
+
+.way-row--old .way-steps::before {
+  border-top: 1px dashed rgba(21, 20, 20, 0.22);
+}
+
+.way-row--new .way-steps::before {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.way-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  padding: 0 6px;
+}
+
+.step-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  font-size: 0.88rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.way-row--old .step-num {
+  background: #e2e2e2;
+  color: var(--color-muted);
+  border: 3px solid #f6f6f6;
+}
+
+.way-row--new .step-num {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border: 3px solid rgba(126, 19, 13, 0.9);
+}
+
+.step-label {
+  font-size: 0.84rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.way-row--old .step-label {
+  color: var(--color-muted);
+}
+
+.way-row--new .step-label {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+/* ─── INTERACTIVE TABS ─── */
+
+.tabs-menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: var(--space-5);
+}
+
+.tabs-menu__btn {
+  border-radius: 999px;
+  padding: 10px 22px;
+  border: 1px solid var(--color-border);
+  background: transparent;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--color-muted);
+  transition: background 180ms ease, color 180ms ease, border-color 180ms ease;
+}
+
+.tabs-menu__btn:hover {
+  border-color: rgba(21, 20, 20, 0.3);
+  color: var(--color-text);
+}
+
+.tabs-menu__btn.is-active {
+  background: var(--color-text);
+  color: #fff;
+  border-color: transparent;
+}
+
+.tabs-panel {
+  display: none;
+}
+
+.tabs-panel.is-active {
+  display: block;
+}
+
+.tabs-panel-inner {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: var(--shadow-card);
+}
+
+.tabs-row {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: var(--space-4);
+  padding: 24px 28px;
+  border-bottom: 1px solid var(--color-border);
+  align-items: start;
+}
+
+.tabs-row:last-child {
+  border-bottom: none;
+}
+
+.tabs-row__topic {
+  font-weight: 600;
+  font-size: 1.02rem;
+  color: var(--color-text);
+  line-height: 1.4;
+}
+
+.tabs-row__topic strong {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.tabs-row__claim {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+  color: var(--color-text);
+}
+
+.tabs-row__citation {
+  font-size: 0.82rem;
+  color: var(--color-muted);
+  margin: 6px 0 0;
+  line-height: 1.4;
+}
+
+/* ─── ABOUT ─── */
+
+.about-section > .container {
+  margin-bottom: var(--space-6);
+}
+
+.about-person {
+  padding: var(--space-6) 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.about-person__grid {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: var(--space-7);
+  align-items: center;
+}
+
+.about-person--reverse .about-person__grid {
+  grid-template-columns: 1fr 380px;
+}
+
+.about-person--reverse .about-person__photo-wrap {
+  order: 2;
+}
+
+.about-person__photo {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  display: block;
+}
+
+.about-person__name {
+  margin: 0 0 8px;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--color-text);
+}
+
+.about-person__title {
+  font-size: 0.84rem;
+  color: var(--color-primary);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0 0 var(--space-3);
+}
+
+.about-person__bio {
+  font-size: 1rem;
+  color: var(--color-muted);
+  line-height: 1.8;
+  margin: 0;
+  max-width: 60ch;
+}
+
+/* ─── FOOTER SOCIALS ─── */
+
+.footer-socials {
+  display: flex;
+  gap: 10px;
+  margin-top: var(--space-2);
+}
+
+.footer-socials a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  color: var(--color-muted);
+  transition: color 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+
+.footer-socials a:hover {
+  color: var(--color-text);
+  border-color: rgba(21, 20, 20, 0.3);
+  background: rgba(21, 20, 20, 0.04);
+}
+
+.footer-socials svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* ─── TESTIMONIALS (rebuilt) ─── */
+
+.testimonials-rebuilt {
+  overflow: hidden;
+}
+
+.testimonial-world-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  align-items: center;
+  gap: var(--space-5);
+  margin-bottom: var(--space-5);
+}
+
+.testimonial-world-map {
+  height: 280px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  position: relative;
+  background: var(--color-surface);
+}
+
+.testimonial-map-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.55;
+}
+
+.testimonial-world-map::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.75) 0%, transparent 20%),
+    linear-gradient(270deg, rgba(255, 255, 255, 0.75) 0%, transparent 20%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.45) 0%, transparent 24%, transparent 76%, rgba(255, 255, 255, 0.45) 100%);
+}
+
+.testimonial-scroll {
+  overflow: hidden;
+  padding: var(--space-3) 0;
+}
+
+.testimonial-track {
+  display: flex;
+  gap: var(--space-3);
+  width: max-content;
+  animation: marquee 32s linear infinite;
+}
+
+.testimonial-scroll:hover .testimonial-track {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.testimonial-track .testimonial-card {
+  width: clamp(280px, 32vw, 380px);
+  flex-shrink: 0;
+}
+
+/* ─── RESPONSIVE: NEW SECTIONS ─── */
+
+@media (max-width: 1080px) {
+  .way-row {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+  }
+
+  .testimonial-world-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonial-world-map {
+    height: 200px;
+  }
+
+  .about-person__grid,
+  .about-person--reverse .about-person__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+
+  .about-person--reverse .about-person__photo-wrap {
+    order: 0;
+  }
+}
+
+@media (max-width: 820px) {
+  .way-steps {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-3);
+    row-gap: var(--space-4);
+  }
+
+  .way-steps::before {
+    display: none;
+  }
+
+  .tabs-row {
+    grid-template-columns: 1fr;
+    gap: var(--space-2);
+  }
+}
+
+@media (max-width: 640px) {
+  .way-steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .brands-strip__logos {
+    justify-content: flex-start;
+    gap: var(--space-4);
+  }
+
+  .about-person__photo {
+    aspect-ratio: 4 / 3;
   }
 }
